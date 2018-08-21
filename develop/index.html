@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>bodycare</title>
+    <title>tasker</title>
     <link rel="stylesheet" href="css/main.css">
     <!--<link rel="stylesheet" href="css/main.min.css">-->
     <script src="js/jquery.min.js"></script>
@@ -14,7 +14,75 @@
 
 <main>
     <div class="container">
+        <div class="taskManager">
+            <form id="tasks" action="#" method="get"></form>
 
+            <div class="taskBar">
+
+                <input type="checkbox" name="dele" form="tasks">
+                <input type="hidden" name="id" value="id">
+
+                <div class="status">
+                    <label> <input type="radio" name="status" value="on" form="tasks"> on </label>
+                    <label> <input type="radio" name="status" value="do" form="tasks"> do </label>
+                    <label> <input type="radio" name="status" value="off" form="tasks"> off </label>
+                </div>
+
+                <div class="textTask">
+
+                    <div class="shortTaskText"><p>некий краткий текст задания</p></div>
+
+                    <div class="longTaskText">
+
+                        <h3>descriptions</h3>
+                        <h4>shorts descriptions</h4>
+
+                        <p class="constTEZIS">Tezis List</p>
+                        <ul class="tezisList">
+                            <li class="tezis">som head</li>
+                            <li class="tezis">next</li>
+                            <li class="tezis">puny priority</li>
+                            <li class="tezis">petite</li>
+                        </ul>
+
+                        <div class="mainTextTasck">
+                            <p>Пойди туда не знаю куда.</p>
+                            <p>принеси то не знаю что и быстрее.........</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="tasckOptions">
+                    <button type="button" class="details">Детали</button>
+                    <button type="button" class="change">Изменить</button>
+                </div>
+            </div>
+
+            <div class="time">
+                <p class="controllTime">27.08.2018 18:30:00</p>
+            </div>
+
+
+            <div class="switch">
+                <div class="switch-back"></div>
+
+                <input type="radio" class="switch-input" name="switch" value="off" id="off" checked>
+                <label for="off" class="switch-label-left switch-label-off"><span>Off</span></label>
+                <div class="label-off">
+                    <div>off</div>
+                </div>
+
+                <input type="radio" class="switch-input" name="switch" value="on" id="on">
+                <label for="on" class="switch-label-right switch-label-on"><span>On</span></label>
+                <div class="label-on">
+                    <div>on</div>
+                </div>
+
+                <span class="switch-selection"></span>
+            </div>
+
+        </div>
     </div>
 </main>
 
