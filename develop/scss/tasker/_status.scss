@@ -11,26 +11,56 @@
   label {
     display: inline-block;
     vertical-align: middle;
-    cursor: pointer;
 
     input {
       display: none;
     }
 
-    div {
-      padding-right: 15px;
+    label {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      position: relative;
+      left: 2px;
+      right: 2px;
+      top:2px;
+      bottom: 2px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid hotpink;
+      margin-right:10px;
       cursor: pointer;
     }
 
-  }
-
-  label:last-of-type{
-    div {
-      padding-right: 0;
+    label i:last-of-type {
+      margin-right: 0;
     }
+
+    i:before {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      right: 2px;
+      color: lightgray;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    input:checked+i:before{
+       opacity: 1;
+    }
+
+
   }
 
 }
+
 
 
 
