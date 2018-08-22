@@ -1,6 +1,8 @@
-body {
-	display:block;
-	flex-direction:column;
-	height:1000px;
-	background-color:#fff;
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }

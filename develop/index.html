@@ -5,6 +5,7 @@
     <title>tasker</title>
     <link rel="stylesheet" href="css/main.css">
     <!--<link rel="stylesheet" href="css/main.min.css">-->
+    <script src="https://use.fontawesome.com/ca671788c0.js"></script>
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -14,23 +15,30 @@
 
 <main>
     <div class="container">
+
         <div class="taskManager">
+
             <form id="tasks" action="#" method="get"></form>
 
             <div class="taskBar">
-
                 <input type="checkbox" name="dele" form="tasks">
                 <input type="hidden" name="id" value="id">
 
                 <div class="status">
-                    <label> <input type="radio" name="status" value="on" form="tasks"> on </label>
-                    <label> <input type="radio" name="status" value="do" form="tasks"> do </label>
-                    <label> <input type="radio" name="status" value="off" form="tasks"> off </label>
+                    <label> <input type="radio" name="status" value="on" form="tasks" checked ><div class="statusTake"><i class="fa fa-check-square-o " aria-hidden="true"></i></div></label>
+                    <label> <input type="radio" name="status" value="do" form="tasks" ><div class="statusProcess"><i class="fa fa-angle-double-right " aria-hidden="true"></i></div></label>
+                    <label> <input type="radio" name="status" value="off" form="tasks"><div class="statusReady"><i class="fa fa-usd " aria-hidden="true"></i>
+                    </div></label>
                 </div>
 
                 <div class="textTask">
 
                     <div class="shortTaskText"><p>некий краткий текст задания</p></div>
+
+                    <div class="tasckOptions">
+                        <button type="button" class="details">Детали</button>
+                        <button type="button" class="change">Изменить</button>
+                    </div>
 
                     <div class="longTaskText">
 
@@ -53,33 +61,11 @@
                     </div>
 
                 </div>
-                <div class="tasckOptions">
-                    <button type="button" class="details">Детали</button>
-                    <button type="button" class="change">Изменить</button>
-                </div>
-            </div>
 
-            <div class="time">
-                <p class="controllTime">27.08.2018 18:30:00</p>
-            </div>
-
-
-            <div class="switch">
-                <div class="switch-back"></div>
-
-                <input type="radio" class="switch-input" name="switch" value="off" id="off" checked>
-                <label for="off" class="switch-label-left switch-label-off"><span>Off</span></label>
-                <div class="label-off">
-                    <div>off</div>
+                <div class="time">
+                    <p class="controllTime">27.08.2018 18:30:00</p>
                 </div>
 
-                <input type="radio" class="switch-input" name="switch" value="on" id="on">
-                <label for="on" class="switch-label-right switch-label-on"><span>On</span></label>
-                <div class="label-on">
-                    <div>on</div>
-                </div>
-
-                <span class="switch-selection"></span>
             </div>
 
         </div>

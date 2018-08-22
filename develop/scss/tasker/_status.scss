@@ -1,0 +1,36 @@
+.status {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.status {
+
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    div {
+      padding-right: 15px;
+      cursor: pointer;
+    }
+
+  }
+
+  label:last-of-type{
+    div {
+      padding-right: 0;
+    }
+  }
+
+}
+
+
+
