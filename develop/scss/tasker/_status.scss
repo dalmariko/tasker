@@ -1,3 +1,63 @@
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@include keyframes(BoxBorder) {
+  0% {
+    border: 0;
+  }
+  25% {
+    border-bottom: 1px black;
+    transition: border-bottom .4s ease;
+  }
+  50% {
+    border-bottom: 1px black;
+    transition: border-bottom .4s ease;
+    border-left: 1px black;
+    transition: border-left .4s ease;
+  }
+  75% {
+    border-bottom: 1px black;
+    transition: border-bottom .4s ease;
+    border-left: 1px black;
+    transition: border-left .4s ease;
+    border-top: 1px black;
+    transition: border-top .4s ease;
+  }
+  100% {
+    border-bottom: 1px black;
+    transition: .4s ease;
+    border-left: 1px black;
+    transition: .4s ease;
+    border-top: 1px black;
+    transition: .4s ease;
+    border-right: 1px black;
+    transition: .4s ease;
+  }
+}
+
 .status {
   display: flex;
   flex-direction: row;
@@ -11,54 +71,66 @@
   label {
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
 
     input {
       display: none;
+
+      &:checked + .statusNo {
+        opacity: 1;
+        color: #d40e37;
+        border-color: #d40e37;
+        transition: color, opacity .4s;
+      }
+
+      &:checked + .statusMake {
+        opacity: 1;
+        color: #96d900;
+        border-color: #96d900;
+        transition: color, opacity .4s;
+      }
+
+      &:checked + .statusDone {
+        opacity: 1;
+        color: #ffa100;
+        border-color: #ffa100;
+        transition: color, opacity .4s;
+      }
+
     }
 
-    label {
+    %share-propertys {
       display: inline-block;
       vertical-align: middle;
+      position: relative;
+
+      text-align: center;
+
+      padding-top: 6%;
+      padding-left: 6%;
+      padding-bottom: 6%;
+      padding-right: 6%;
+
+      width: 25px;
+      height: 25px;
+
+      border: 1px solid #d3d3d3;
+
+      font-size: 1.3em;
+      color: #d3d3d3;
+      opacity: .5;
+      margin-right: 10px;
     }
 
     i {
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      position: relative;
-      left: 2px;
-      right: 2px;
-      top:2px;
-      bottom: 2px;
-      width: 25px;
-      height: 25px;
-      border: 1px solid hotpink;
-      margin-right:10px;
-      cursor: pointer;
-    }
+      @extend %share-propertys;
 
-    label i:last-of-type {
-      margin-right: 0;
     }
-
-    i:before {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      bottom: 2px;
-      right: 2px;
-      color: lightgray;
-      opacity: 0;
-      transition: opacity .4s;
-    }
-
-    input:checked+i:before{
-       opacity: 1;
-    }
-
 
   }
-
+  label:last-of-type i {
+    margin-right: 0;
+  }
 }
 
 
