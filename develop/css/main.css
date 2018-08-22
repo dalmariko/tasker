@@ -3,14 +3,24 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
-body {
+body, p {
   margin: 0; }
 
 a {
   text-decoration: none; }
 
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+
 .taskManager {
-  display: block; }
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .taskBar {
   display: -webkit-box;
@@ -24,7 +34,20 @@ a {
      -moz-box-orient: horizontal;
      -moz-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .status {
   display: -webkit-box;
@@ -38,4 +61,24 @@ a {
      -moz-box-orient: horizontal;
      -moz-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.status label:after, .status label:before {
+  display: table;
+  content: '';
+  clear: both; }
+
+.textTask {
+  padding-right: 5px;
+  padding-left: 5px; }
+
+.time {
+  padding-left: 5px;
+  padding-right: 5px; }
