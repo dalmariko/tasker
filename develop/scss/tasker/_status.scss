@@ -1,18 +1,11 @@
-$colorStatusNo : #d40e37;
-$colorStatusMake : #96d900;
-$colorStatusDone : #ffa100;
+$colorStatusNo: #d40e37;
+$colorStatusMake: #96d900;
+$colorStatusDone: #ffa100;
 
 %share-propertys {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-
-  text-align: center;
-
-  padding-top: 6%;
-  padding-left: 6%;
-  padding-bottom: 6%;
-  padding-right: 6%;
 
   width: 25px;
   height: 25px;
@@ -25,6 +18,12 @@ $colorStatusDone : #ffa100;
   margin-right: 10px;
 }
 
+%AfterBefore {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
 
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
@@ -52,23 +51,17 @@ $colorStatusDone : #ffa100;
   animation: #{$str};
 }
 
-
-
-
 @include keyframes(BoxBorder) {
 
 }
 
-
-
-@mixin checkColor ($color) {
+@mixin checkColor($color) {
   opacity: 1;
   color: $color;
   border-color: $color;
   @include animation('BoxBorder .9s ease');
   transition: color, opacity .4s;
 }
-
 
 .status {
   display: flex;
@@ -92,11 +85,35 @@ $colorStatusDone : #ffa100;
         @include checkColor($colorStatusNo);
       }
 
+      &:hover + .statusNo {
+        @include checkColor($colorStatusNo);
+      }
+
+      &:focus + .statusNo {
+        @include checkColor($colorStatusNo);
+      }
+
       &:checked + .statusMake {
-       @include checkColor($colorStatusMake);
+        @include checkColor($colorStatusMake);
+      }
+
+      &:hover + .statusMake {
+        @include checkColor($colorStatusMake);
+      }
+
+      &:focus + .statusMake {
+        @include checkColor($colorStatusMake);
       }
 
       &:checked + .statusDone {
+        @include checkColor($colorStatusDone);
+      }
+
+      &:hover + .statusDone {
+        @include checkColor($colorStatusDone);
+      }
+
+      &:focus + .statusDone {
         @include checkColor($colorStatusDone);
       }
 
@@ -106,12 +123,87 @@ $colorStatusDone : #ffa100;
       @extend %share-propertys;
     }
 
+    i:after {
+      @extend %AfterBefore;
+    }
+
+    i:before {
+      @extend %AfterBefore;
+      left:6px;
+      top:2px;
+    }
+     i.statusNo:before {
+      @extend %AfterBefore;
+      left:2.5px;
+       top:2.5px;
+    }
+
   }
   label:last-of-type i {
     margin-right: 0;
   }
 }
 
+.button-container a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  position: relative;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: none;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
+.button-container a:before,
+.button-container a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  box-sizing: border-box;
+}
 
+.button-container a:before {
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .6s;
+
+}
+
+.button-container a:after {
+  top: 0;
+  right: 0;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .2s;
+}
+
+.button-container a:hover:before,
+.button-container a:hover:after {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.button-container a:hover:before {
+  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .6s;
+
+}
+
+.button-container a:hover:after {
+  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .2s;
+}
+
+.button-container a:hover {
+  background: rgba(255, 255, 255, .2);
+}
 

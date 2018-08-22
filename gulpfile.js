@@ -14,6 +14,7 @@ gulp.task('sass', function () {
     return gulp.src('develop/scss/**/*.scss')
         .pipe(sass())
         .pipe(autoprefixer(['last 50 versions', '> 1%', 'ie 8', 'ie 7']))
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest('develop/css'))
         .pipe(bro.reload({stream: true}));
 });
