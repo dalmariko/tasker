@@ -49,195 +49,22 @@ a {
       -ms-flex-align: start;
           align-items: flex-start; }
 
-@-webkit-keyframes BoxBorder {
-  25% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease; }
-  50% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease; }
-  75% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease;
-    border-top: 1px transparent;
-    -webkit-transition: border-top .6s ease;
-    -o-transition: border-top .6s ease;
-    -moz-transition: border-top .6s ease;
-    transition: border-top .6s ease; }
-  100% {
-    border-bottom: 1px transparent;
-    -webkit-transition: .6s ease;
-    -o-transition: .6s ease;
-    -moz-transition: .6s ease;
-    transition: .6s ease;
-    border-left: 1px transparent;
-    transition: .6s ease;
-    border-top: 1px transparent;
-    transition: .6s ease;
-    border-right: 1px transparent;
-    transition: .6s ease; } }
-
-@-moz-keyframes BoxBorder {
-  25% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease; }
-  50% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease; }
-  75% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease;
-    border-top: 1px transparent;
-    -webkit-transition: border-top .6s ease;
-    -o-transition: border-top .6s ease;
-    -moz-transition: border-top .6s ease;
-    transition: border-top .6s ease; }
-  100% {
-    border-bottom: 1px transparent;
-    -webkit-transition: .6s ease;
-    -o-transition: .6s ease;
-    -moz-transition: .6s ease;
-    transition: .6s ease;
-    border-left: 1px transparent;
-    transition: .6s ease;
-    border-top: 1px transparent;
-    transition: .6s ease;
-    border-right: 1px transparent;
-    transition: .6s ease; } }
-
-@-o-keyframes BoxBorder {
-  25% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease; }
-  50% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease; }
-  75% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease;
-    border-top: 1px transparent;
-    -webkit-transition: border-top .6s ease;
-    -o-transition: border-top .6s ease;
-    -moz-transition: border-top .6s ease;
-    transition: border-top .6s ease; }
-  100% {
-    border-bottom: 1px transparent;
-    -webkit-transition: .6s ease;
-    -o-transition: .6s ease;
-    -moz-transition: .6s ease;
-    transition: .6s ease;
-    border-left: 1px transparent;
-    transition: .6s ease;
-    border-top: 1px transparent;
-    transition: .6s ease;
-    border-right: 1px transparent;
-    transition: .6s ease; } }
-
-@keyframes BoxBorder {
-  25% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease; }
-  50% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease; }
-  75% {
-    border-bottom: 1px transparent;
-    -webkit-transition: border-bottom .6s ease;
-    -o-transition: border-bottom .6s ease;
-    -moz-transition: border-bottom .6s ease;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    -webkit-transition: border-left .6s ease;
-    -o-transition: border-left .6s ease;
-    -moz-transition: border-left .6s ease;
-    transition: border-left .6s ease;
-    border-top: 1px transparent;
-    -webkit-transition: border-top .6s ease;
-    -o-transition: border-top .6s ease;
-    -moz-transition: border-top .6s ease;
-    transition: border-top .6s ease; }
-  100% {
-    border-bottom: 1px transparent;
-    -webkit-transition: .6s ease;
-    -o-transition: .6s ease;
-    -moz-transition: .6s ease;
-    transition: .6s ease;
-    border-left: 1px transparent;
-    transition: .6s ease;
-    border-top: 1px transparent;
-    transition: .6s ease;
-    border-right: 1px transparent;
-    transition: .6s ease; } }
-
-.status {
+.status label i {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  padding-top: 6%;
+  padding-left: 6%;
+  padding-bottom: 6%;
+  padding-right: 6%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #d3d3d3;
+  font-size: 1.3em;
+  color: #d3d3d3;
+  opacity: .5;
+  margin-right: 10px; }.status {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -300,22 +127,6 @@ a {
       -o-transition: color, opacity .4s;
       -moz-transition: color, opacity .4s;
       transition: color, opacity .4s; }
-  .status label i {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    text-align: center;
-    padding-top: 6%;
-    padding-left: 6%;
-    padding-bottom: 6%;
-    padding-right: 6%;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #d3d3d3;
-    font-size: 1.3em;
-    color: #d3d3d3;
-    opacity: .5;
-    margin-right: 10px; }
 
 .status label:last-of-type i {
   margin-right: 0; }

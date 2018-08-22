@@ -1,3 +1,31 @@
+$colorStatusNo : #d40e37;
+$colorStatusMake : #96d900;
+$colorStatusDone : #ffa100;
+
+%share-propertys {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  text-align: center;
+
+  padding-top: 6%;
+  padding-left: 6%;
+  padding-bottom: 6%;
+  padding-right: 6%;
+
+  width: 25px;
+  height: 25px;
+
+  border: 1px solid #d3d3d3;
+
+  font-size: 1.3em;
+  color: #d3d3d3;
+  opacity: .5;
+  margin-right: 10px;
+}
+
+
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -24,37 +52,23 @@
   animation: #{$str};
 }
 
+
+
+
 @include keyframes(BoxBorder) {
 
-  25% {
-    border-bottom: 1px transparent;
-    transition: border-bottom .6s ease;
-  }
-  50% {
-    border-bottom: 1px transparent;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    transition: border-left .6s ease;
-  }
-  75% {
-    border-bottom: 1px transparent;
-    transition: border-bottom .6s ease;
-    border-left: 1px transparent;
-    transition: border-left .6s ease;
-    border-top: 1px transparent;
-    transition: border-top .6s ease;
-  }
-  100% {
-    border-bottom: 1px transparent;
-    transition: .6s ease;
-    border-left: 1px transparent;
-    transition: .6s ease;
-    border-top: 1px transparent;
-    transition: .6s ease;
-    border-right: 1px transparent;
-    transition: .6s ease;
-  }
 }
+
+
+
+@mixin checkColor ($color) {
+  opacity: 1;
+  color: $color;
+  border-color: $color;
+  @include animation('BoxBorder .9s ease');
+  transition: color, opacity .4s;
+}
+
 
 .status {
   display: flex;
@@ -75,52 +89,17 @@
       display: none;
 
       &:checked + .statusNo {
-        opacity: 1;
-        color: #d40e37;
-        border-color: #d40e37;
-        @include animation('BoxBorder .9s ease');
-        transition: color, opacity .4s;
+        @include checkColor($colorStatusNo);
       }
 
       &:checked + .statusMake {
-        opacity: 1;
-        color: #96d900;
-        border-color: #96d900;
-        @include animation('BoxBorder .9s ease');
-        transition: color, opacity .4s;
+       @include checkColor($colorStatusMake);
       }
 
       &:checked + .statusDone {
-        opacity: 1;
-        color: #ffa100;
-        border-color: #ffa100;
-        @include animation('BoxBorder .9s ease');
-        transition: color, opacity .4s;
+        @include checkColor($colorStatusDone);
       }
 
-    }
-
-    %share-propertys {
-      display: inline-block;
-      vertical-align: middle;
-      position: relative;
-
-      text-align: center;
-
-      padding-top: 6%;
-      padding-left: 6%;
-      padding-bottom: 6%;
-      padding-right: 6%;
-
-      width: 25px;
-      height: 25px;
-
-      border: 1px solid #d3d3d3;
-
-      font-size: 1.3em;
-      color: #d3d3d3;
-      opacity: .5;
-      margin-right: 10px;
     }
 
     i {
