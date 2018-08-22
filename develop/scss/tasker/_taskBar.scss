@@ -1,0 +1,10 @@
+.taskBar{
+  display: flex;
+  flex-direction: row;
+}
+
+@import "status";
+
+@import "textTask";
+
+@import "time";
