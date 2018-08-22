@@ -6,8 +6,24 @@
   padding-right: 5px;
 }
 
-.status label:after, .status label:before {
-  display: table;
-  content:'';
-  clear: both;
+.status input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.status span {
+  position: relative;
+  padding: 0 15px 0 0;
+  cursor: pointer;
+}
+
+.status input:last-of-type span {
+  padding-right:0;
+}
+
+
+
+.status input:focus{
+
 }
