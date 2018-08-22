@@ -50,200 +50,192 @@ a {
           align-items: flex-start; }
 
 @-webkit-keyframes BoxBorder {
-  0% {
-    border: 0; }
   25% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease; }
   50% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease; }
   75% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease;
-    border-top: 1px black;
-    -webkit-transition: border-top .4s ease;
-    -o-transition: border-top .4s ease;
-    -moz-transition: border-top .4s ease;
-    transition: border-top .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease;
+    border-top: 1px transparent;
+    -webkit-transition: border-top .6s ease;
+    -o-transition: border-top .6s ease;
+    -moz-transition: border-top .6s ease;
+    transition: border-top .6s ease; }
   100% {
-    border-bottom: 1px black;
-    -webkit-transition: .4s ease;
-    -o-transition: .4s ease;
-    -moz-transition: .4s ease;
-    transition: .4s ease;
-    border-left: 1px black;
-    transition: .4s ease;
-    border-top: 1px black;
-    transition: .4s ease;
-    border-right: 1px black;
-    transition: .4s ease; } }
+    border-bottom: 1px transparent;
+    -webkit-transition: .6s ease;
+    -o-transition: .6s ease;
+    -moz-transition: .6s ease;
+    transition: .6s ease;
+    border-left: 1px transparent;
+    transition: .6s ease;
+    border-top: 1px transparent;
+    transition: .6s ease;
+    border-right: 1px transparent;
+    transition: .6s ease; } }
 
 @-moz-keyframes BoxBorder {
-  0% {
-    border: 0; }
   25% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease; }
   50% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease; }
   75% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease;
-    border-top: 1px black;
-    -webkit-transition: border-top .4s ease;
-    -o-transition: border-top .4s ease;
-    -moz-transition: border-top .4s ease;
-    transition: border-top .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease;
+    border-top: 1px transparent;
+    -webkit-transition: border-top .6s ease;
+    -o-transition: border-top .6s ease;
+    -moz-transition: border-top .6s ease;
+    transition: border-top .6s ease; }
   100% {
-    border-bottom: 1px black;
-    -webkit-transition: .4s ease;
-    -o-transition: .4s ease;
-    -moz-transition: .4s ease;
-    transition: .4s ease;
-    border-left: 1px black;
-    transition: .4s ease;
-    border-top: 1px black;
-    transition: .4s ease;
-    border-right: 1px black;
-    transition: .4s ease; } }
+    border-bottom: 1px transparent;
+    -webkit-transition: .6s ease;
+    -o-transition: .6s ease;
+    -moz-transition: .6s ease;
+    transition: .6s ease;
+    border-left: 1px transparent;
+    transition: .6s ease;
+    border-top: 1px transparent;
+    transition: .6s ease;
+    border-right: 1px transparent;
+    transition: .6s ease; } }
 
 @-o-keyframes BoxBorder {
-  0% {
-    border: 0; }
   25% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease; }
   50% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease; }
   75% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease;
-    border-top: 1px black;
-    -webkit-transition: border-top .4s ease;
-    -o-transition: border-top .4s ease;
-    -moz-transition: border-top .4s ease;
-    transition: border-top .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease;
+    border-top: 1px transparent;
+    -webkit-transition: border-top .6s ease;
+    -o-transition: border-top .6s ease;
+    -moz-transition: border-top .6s ease;
+    transition: border-top .6s ease; }
   100% {
-    border-bottom: 1px black;
-    -webkit-transition: .4s ease;
-    -o-transition: .4s ease;
-    -moz-transition: .4s ease;
-    transition: .4s ease;
-    border-left: 1px black;
-    transition: .4s ease;
-    border-top: 1px black;
-    transition: .4s ease;
-    border-right: 1px black;
-    transition: .4s ease; } }
+    border-bottom: 1px transparent;
+    -webkit-transition: .6s ease;
+    -o-transition: .6s ease;
+    -moz-transition: .6s ease;
+    transition: .6s ease;
+    border-left: 1px transparent;
+    transition: .6s ease;
+    border-top: 1px transparent;
+    transition: .6s ease;
+    border-right: 1px transparent;
+    transition: .6s ease; } }
 
 @keyframes BoxBorder {
-  0% {
-    border: 0; }
   25% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease; }
   50% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease; }
   75% {
-    border-bottom: 1px black;
-    -webkit-transition: border-bottom .4s ease;
-    -o-transition: border-bottom .4s ease;
-    -moz-transition: border-bottom .4s ease;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    -webkit-transition: border-left .4s ease;
-    -o-transition: border-left .4s ease;
-    -moz-transition: border-left .4s ease;
-    transition: border-left .4s ease;
-    border-top: 1px black;
-    -webkit-transition: border-top .4s ease;
-    -o-transition: border-top .4s ease;
-    -moz-transition: border-top .4s ease;
-    transition: border-top .4s ease; }
+    border-bottom: 1px transparent;
+    -webkit-transition: border-bottom .6s ease;
+    -o-transition: border-bottom .6s ease;
+    -moz-transition: border-bottom .6s ease;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    -webkit-transition: border-left .6s ease;
+    -o-transition: border-left .6s ease;
+    -moz-transition: border-left .6s ease;
+    transition: border-left .6s ease;
+    border-top: 1px transparent;
+    -webkit-transition: border-top .6s ease;
+    -o-transition: border-top .6s ease;
+    -moz-transition: border-top .6s ease;
+    transition: border-top .6s ease; }
   100% {
-    border-bottom: 1px black;
-    -webkit-transition: .4s ease;
-    -o-transition: .4s ease;
-    -moz-transition: .4s ease;
-    transition: .4s ease;
-    border-left: 1px black;
-    transition: .4s ease;
-    border-top: 1px black;
-    transition: .4s ease;
-    border-right: 1px black;
-    transition: .4s ease; } }
+    border-bottom: 1px transparent;
+    -webkit-transition: .6s ease;
+    -o-transition: .6s ease;
+    -moz-transition: .6s ease;
+    transition: .6s ease;
+    border-left: 1px transparent;
+    transition: .6s ease;
+    border-top: 1px transparent;
+    transition: .6s ease;
+    border-right: 1px transparent;
+    transition: .6s ease; } }
 
 .status {
   display: -webkit-box;
@@ -276,6 +268,10 @@ a {
       opacity: 1;
       color: #d40e37;
       border-color: #d40e37;
+      -webkit-animation: BoxBorder .9s ease;
+      -moz-animation: BoxBorder .9s ease;
+      -o-animation: BoxBorder .9s ease;
+      animation: BoxBorder .9s ease;
       -webkit-transition: color, opacity .4s;
       -o-transition: color, opacity .4s;
       -moz-transition: color, opacity .4s;
@@ -284,6 +280,10 @@ a {
       opacity: 1;
       color: #96d900;
       border-color: #96d900;
+      -webkit-animation: BoxBorder .9s ease;
+      -moz-animation: BoxBorder .9s ease;
+      -o-animation: BoxBorder .9s ease;
+      animation: BoxBorder .9s ease;
       -webkit-transition: color, opacity .4s;
       -o-transition: color, opacity .4s;
       -moz-transition: color, opacity .4s;
@@ -292,6 +292,10 @@ a {
       opacity: 1;
       color: #ffa100;
       border-color: #ffa100;
+      -webkit-animation: BoxBorder .9s ease;
+      -moz-animation: BoxBorder .9s ease;
+      -o-animation: BoxBorder .9s ease;
+      animation: BoxBorder .9s ease;
       -webkit-transition: color, opacity .4s;
       -o-transition: color, opacity .4s;
       -moz-transition: color, opacity .4s;

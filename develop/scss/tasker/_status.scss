@@ -25,36 +25,34 @@
 }
 
 @include keyframes(BoxBorder) {
-  0% {
-    border: 0;
-  }
+
   25% {
-    border-bottom: 1px black;
-    transition: border-bottom .4s ease;
+    border-bottom: 1px transparent;
+    transition: border-bottom .6s ease;
   }
   50% {
-    border-bottom: 1px black;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    transition: border-left .4s ease;
+    border-bottom: 1px transparent;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    transition: border-left .6s ease;
   }
   75% {
-    border-bottom: 1px black;
-    transition: border-bottom .4s ease;
-    border-left: 1px black;
-    transition: border-left .4s ease;
-    border-top: 1px black;
-    transition: border-top .4s ease;
+    border-bottom: 1px transparent;
+    transition: border-bottom .6s ease;
+    border-left: 1px transparent;
+    transition: border-left .6s ease;
+    border-top: 1px transparent;
+    transition: border-top .6s ease;
   }
   100% {
-    border-bottom: 1px black;
-    transition: .4s ease;
-    border-left: 1px black;
-    transition: .4s ease;
-    border-top: 1px black;
-    transition: .4s ease;
-    border-right: 1px black;
-    transition: .4s ease;
+    border-bottom: 1px transparent;
+    transition: .6s ease;
+    border-left: 1px transparent;
+    transition: .6s ease;
+    border-top: 1px transparent;
+    transition: .6s ease;
+    border-right: 1px transparent;
+    transition: .6s ease;
   }
 }
 
@@ -80,6 +78,7 @@
         opacity: 1;
         color: #d40e37;
         border-color: #d40e37;
+        @include animation('BoxBorder .9s ease');
         transition: color, opacity .4s;
       }
 
@@ -87,6 +86,7 @@
         opacity: 1;
         color: #96d900;
         border-color: #96d900;
+        @include animation('BoxBorder .9s ease');
         transition: color, opacity .4s;
       }
 
@@ -94,6 +94,7 @@
         opacity: 1;
         color: #ffa100;
         border-color: #ffa100;
+        @include animation('BoxBorder .9s ease');
         transition: color, opacity .4s;
       }
 
@@ -124,7 +125,6 @@
 
     i {
       @extend %share-propertys;
-
     }
 
   }
