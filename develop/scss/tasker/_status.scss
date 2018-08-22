@@ -2,26 +2,33 @@ $colorStatusNo: #d40e37;
 $colorStatusMake: #96d900;
 $colorStatusDone: #ffa100;
 
-%share-propertys {
+%i-propertys {
   display: inline-block;
   vertical-align: middle;
+  padding: 6px;
+  width: 30px;
+  height: 30px;
   position: relative;
-
-  width: 25px;
-  height: 25px;
-
-  border: 1px solid #d3d3d3;
-
   font-size: 1.3em;
-  color: #d3d3d3;
-  opacity: .5;
-  margin-right: 10px;
+  color: #e3dae7;
+  opacity: .8;
 }
 
-%AfterBefore {
-  position: absolute;
-  width: 0;
-  height: 0;
+%LabelBefore {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e3dae7;
+  border-radius: 3px;
+  opacity: .8;
+}
+
+%border{
+  border: 1px solid #e34cac;
+  border-radius: 3px;
   opacity: 1;
 }
 
@@ -52,15 +59,42 @@ $colorStatusDone: #ffa100;
 }
 
 @include keyframes(BoxBorder) {
-
+  0% {
+    border-bottom: 1px solid #e34cac;
+    border-radius: 3px;
+    opacity: 1;
+    transition: border 1s ease-in .9s, opacity 10s;
+  }
+  25% {
+    border-left: 1px solid #e34cac;
+    border-radius: 3px;
+    opacity: 1;
+    transition: border 1s ease-in .9s, opacity 10s;
+  }
+  50% {
+    border-top: 1px solid #e34cac;
+    border-radius: 3px;
+    opacity: 1;
+    transition: border 1s ease-in .9s, opacity 10s;
+  }
+  75% {
+    border-right: 1px solid #e34cac;
+    border-radius: 3px;
+    opacity: 1;
+    transition: border 1s ease-in .9s, opacity 10s ;
+  }
+  100% {
+    border: 1px solid #e34cac;
+    border-radius: 3px;
+    opacity: 1;
+    transition: border 1s ease-in .9s, opacity 10s;
+  }
 }
 
 @mixin checkColor($color) {
   opacity: 1;
   color: $color;
-  border-color: $color;
-  @include animation('BoxBorder .9s ease');
-  transition: color, opacity .4s;
+  transition: color .4s, opacity .4s;
 }
 
 .status {
@@ -74,9 +108,27 @@ $colorStatusDone: #ffa100;
 .status {
 
   label {
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
+   @extend %LabelBefore;
+
+    &:hover {
+      @include animation('BoxBorder .9s ease');
+    }
+
+    //input:focus   {
+    //  @extend %border;
+    //}
+    //
+    //input:active  {
+    //  @extend %border;
+    //}
+
+    input:checked {
+     @extend %border;
+    }
+
+    &:before {
+      @extend %LabelBefore;
+    }
 
     input {
       display: none;
@@ -120,90 +172,10 @@ $colorStatusDone: #ffa100;
     }
 
     i {
-      @extend %share-propertys;
-    }
-
-    i:after {
-      @extend %AfterBefore;
-    }
-
-    i:before {
-      @extend %AfterBefore;
-      left:6px;
-      top:2px;
-    }
-     i.statusNo:before {
-      @extend %AfterBefore;
-      left:2.5px;
-       top:2.5px;
+      @extend %i-propertys;
     }
 
   }
-  label:last-of-type i {
-    margin-right: 0;
-  }
-}
 
-.button-container a {
-  text-decoration: none;
-  outline: none;
-  display: inline-block;
-  padding: 20px 30px;
-  margin: 10px 20px;
-  position: relative;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: none;
-  font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.button-container a:before,
-.button-container a:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  box-sizing: border-box;
-}
-
-.button-container a:before {
-  bottom: 0;
-  left: 0;
-  border-left: 1px solid white;
-  border-top: 1px solid white;
-  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .6s;
-
-}
-
-.button-container a:after {
-  top: 0;
-  right: 0;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .2s;
-}
-
-.button-container a:hover:before,
-.button-container a:hover:after {
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-}
-
-.button-container a:hover:before {
-  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .6s;
-
-}
-
-.button-container a:hover:after {
-  transition: opacity .8s ease 0s, width .2s ease .4s, height .2s ease .2s;
-}
-
-.button-container a:hover {
-  background: rgba(255, 255, 255, .2);
 }
 
