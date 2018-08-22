@@ -6,24 +6,31 @@
   padding-right: 5px;
 }
 
-.status input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+.status {
+
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    div {
+      padding-right: 15px;
+      cursor: pointer;
+    }
+
+  }
+
+  label:last-of-type{
+    div {
+      padding-right: 0;
+    }
+  }
+
 }
 
-.status span {
-  position: relative;
-  padding: 0 15px 0 0;
-  cursor: pointer;
-}
-
-.status input:last-of-type span {
-  padding-right:0;
-}
 
 
-
-.status input:focus{
-
-}

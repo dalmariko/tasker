@@ -5,6 +5,7 @@
     <title>tasker</title>
     <link rel="stylesheet" href="css/main.css">
     <!--<link rel="stylesheet" href="css/main.min.css">-->
+    <script src="https://use.fontawesome.com/ca671788c0.js"></script>
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -24,9 +25,10 @@
                 <input type="hidden" name="id" value="id">
 
                 <div class="status">
-                    <label> <input type="radio" name="status" value="on" form="tasks" checked ><span class="statusTake">on</span></label>
-                    <label> <input type="radio" name="status" value="do" form="tasks" ><span class="statusProcess">do</span></label>
-                    <label> <input type="radio" name="status" value="off" form="tasks"><span class="statusReady">off</span></label>
+                    <label> <input type="radio" name="status" value="on" form="tasks" checked ><div class="statusTake"><i class="fa fa-check-square-o " aria-hidden="true"></i></div></label>
+                    <label> <input type="radio" name="status" value="do" form="tasks" ><div class="statusProcess"><i class="fa fa-angle-double-right " aria-hidden="true"></i></div></label>
+                    <label> <input type="radio" name="status" value="off" form="tasks"><div class="statusReady"><i class="fa fa-usd " aria-hidden="true"></i>
+                    </div></label>
                 </div>
 
                 <div class="textTask">
