@@ -94,6 +94,7 @@ $colorStatusDone: #ffa100;
 @mixin checkColor($color) {
   opacity: 1;
   color: $color;
+  @include animation('BoxBorder .9s ease');
   transition: color .4s, opacity .4s;
 }
 
@@ -109,10 +110,6 @@ $colorStatusDone: #ffa100;
 
   label {
    @extend %LabelBefore;
-
-    &:hover {
-      @include animation('BoxBorder .9s ease');
-    }
 
     //input:focus   {
     //  @extend %border;

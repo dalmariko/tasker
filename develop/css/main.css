@@ -311,13 +311,6 @@ a {
   padding-right: 5px;
 }
 
-.status label:hover {
-  -webkit-animation: BoxBorder .9s ease;
-  -moz-animation: BoxBorder .9s ease;
-  -o-animation: BoxBorder .9s ease;
-  animation: BoxBorder .9s ease;
-}
-
 .status label input {
   display: none;
 }
@@ -325,6 +318,10 @@ a {
 .status label input:checked + .statusNo {
   opacity: 1;
   color: #d40e37;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -334,6 +331,10 @@ a {
 .status label input:hover + .statusNo {
   opacity: 1;
   color: #d40e37;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -343,6 +344,10 @@ a {
 .status label input:focus + .statusNo {
   opacity: 1;
   color: #d40e37;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -352,6 +357,10 @@ a {
 .status label input:checked + .statusMake {
   opacity: 1;
   color: #96d900;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -361,6 +370,10 @@ a {
 .status label input:hover + .statusMake {
   opacity: 1;
   color: #96d900;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -370,6 +383,10 @@ a {
 .status label input:focus + .statusMake {
   opacity: 1;
   color: #96d900;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -379,6 +396,10 @@ a {
 .status label input:checked + .statusDone {
   opacity: 1;
   color: #ffa100;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -388,6 +409,10 @@ a {
 .status label input:hover + .statusDone {
   opacity: 1;
   color: #ffa100;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
@@ -397,6 +422,10 @@ a {
 .status label input:focus + .statusDone {
   opacity: 1;
   color: #ffa100;
+  -webkit-animation: BoxBorder .9s ease;
+  -moz-animation: BoxBorder .9s ease;
+  -o-animation: BoxBorder .9s ease;
+  animation: BoxBorder .9s ease;
   -webkit-transition: color .4s, opacity .4s;
   -o-transition: color .4s, opacity .4s;
   -moz-transition: color .4s, opacity .4s;
