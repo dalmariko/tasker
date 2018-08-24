@@ -107,6 +107,8 @@ $colorStatusDone: #ffa100;
   }
 }
 
+
+
 .status {
 
   display: flex;
@@ -116,6 +118,7 @@ $colorStatusDone: #ffa100;
   padding-right: 5px;
 
   label {
+
     @extend %Label;
     @include animation('BoxBorder .9s ease');
 
