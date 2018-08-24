@@ -55,31 +55,53 @@ a {
   align-items: flex-start;
 }
 
+.status label i, .status {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .status label i {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 6px;
   width: 30px;
   height: 30px;
-  font-size: 1.3em;
   border: 1px solid #e3dae7;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  color: #e3dae7;
   opacity: .8;
 }
 
+.status label i {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1.3em;
+  color: #e3dae7;
+}
+
 .status label {
-  display: inline-block;
-  vertical-align: middle;
   cursor: pointer;
-  margin-right: 20px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #e3dae7;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  opacity: .8;
+  margin-right: 10px;
 }
 
 .status label input:checked + .statusNo, .status label input:hover + .statusNo, .status label input:focus + .statusNo, .status label input:checked + .statusMake, .status label input:hover + .statusMake, .status label input:focus + .statusMake, .status label input:checked + .statusDone, .status label input:hover + .statusDone, .status label input:focus + .statusDone {
@@ -225,23 +247,6 @@ a {
 }
 
 .status {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-box-orient: horizontal;
-  -moz-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -255,6 +260,10 @@ a {
 
 .status label input {
   display: none;
+}
+
+.status label:last-of-type {
+  margin-right: 0;
 }
 
 .textTask {

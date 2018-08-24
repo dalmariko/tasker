@@ -1,37 +1,66 @@
 $colorStatusNo: #d40e37;
 $colorStatusMake: #96d900;
 $colorStatusDone: #ffa100;
+$colorDisable:  #e3dae7;
+$colorBoxEnable: #e34cac;
 
-%i-propertys {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 6px;
+
+%displayFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+%box {
   width: 30px;
   height: 30px;
-  font-size: 1.3em;
-  border: 1px solid #e3dae7;
+  border: 1px solid $colorDisable;
   border-radius: 3px;
-  color: #e3dae7;
   opacity: .8;
+}
+
+%i-propertys {
+  @extend %displayFlex;
+  @extend %box;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  color:$colorDisable;
 }
 
 %Label {
-  display: inline-block;
-  vertical-align: middle;
   cursor: pointer;
-  margin-right: 20px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #e3dae7;
-  border-radius: 3px;
-  opacity: .8;
+  margin-right: 10px;
 }
 
 %border {
-  border: 1px solid #e34cac;
+  border: 1px solid $colorBoxEnable;
   border-radius: 3px;
   opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %colorInput {
   opacity: 1;
@@ -107,13 +136,9 @@ $colorStatusDone: #ffa100;
   }
 }
 
-
-
 .status {
+  @extend %displayFlex;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding-left: 5px;
   padding-right: 5px;
 
@@ -165,6 +190,10 @@ $colorStatusDone: #ffa100;
 
     i {
       @extend %i-propertys;
+    }
+
+    &:last-of-type{
+      margin-right: 0;
     }
 
   }
