@@ -12,11 +12,13 @@
   @extend %button;
   @extend %displayFlex;
   @extend %flexCenter;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   button {
     width: 100px;
     height: 30px;
-    font-size: .9rem;
+    font-size: .94rem;
     padding: 2px;
     border: 1px solid #dab6c8;
     border-radius: 5px;

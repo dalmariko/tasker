@@ -169,10 +169,15 @@ input:hover, button:hover, a:hover, input:focus, button:focus, a:focus, input:ac
   transition: opacity .4s, background-color .3s;
 }
 
+.tasckOptions {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .tasckOptions button {
   width: 100px;
   height: 30px;
-  font-size: .9rem;
+  font-size: .94rem;
   padding: 2px;
   border: 1px solid #dab6c8;
   -webkit-border-radius: 5px;
