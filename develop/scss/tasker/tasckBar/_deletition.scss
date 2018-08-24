@@ -3,6 +3,7 @@
 
   label {
     @extend %Label;
+    margin-right: 0;
 
     &:checked {
       @extend %border;
@@ -15,25 +16,24 @@
     &:focus {
       @extend %border;
     }
+
+    input {
+      display: none;
+
+      &:checked + i {
+        @extend %statusActive;
+      }
+
+      &:hover + i {
+        @extend %statusActive;
+      }
+
+      &:focus + i {
+        @extend %statusActive;
+      }
+
+    }
   }
-
-  input {
-    display: none;
-
-    &:checked + i {
-      @extend %statusActive;
-    }
-
-    &:hover + i {
-      @extend %statusActive;
-    }
-
-    &:focus + i {
-      @extend %statusActive;
-    }
-
-  }
-
   i {
     @extend %i-propertys;
   }

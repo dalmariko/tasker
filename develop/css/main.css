@@ -55,12 +55,12 @@ a {
   align-items: flex-start;
 }
 
-.status, .textTask, .time {
+.deletition, .status, .textTask, .time {
   padding-right: 5px;
   padding-left: 5px;
 }
 
-.statusNo, .statusMake, .statusDone {
+.statusDelete, .statusNo, .statusMake, .statusDone {
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   -o-background-size: contain;
@@ -68,7 +68,7 @@ a {
   background-position: center;
 }
 
-.status label i, .status label, .status {
+.deletition i, .status label i, .deletition label, .status label, .status {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -88,7 +88,7 @@ a {
   justify-content: space-between;
 }
 
-.status label i, .status label {
+.deletition i, .status label i, .deletition label, .status label {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -moz-box-align: center;
@@ -101,18 +101,18 @@ a {
   justify-content: center;
 }
 
-.status label i {
+.deletition i, .status label i {
   width: 20px;
   height: 20px;
   opacity: .25;
 }
 
-.status label, .status label:checked, .status label:hover, .status label:focus {
+.deletition label, .status label, .deletition label:checked, .deletition label:hover, .deletition label:focus, .status label:checked, .status label:hover, .status label:focus {
   width: 30px;
   height: 30px;
 }
 
-.status label {
+.deletition label, .status label {
   border: 1px solid #e3dae7;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -120,19 +120,27 @@ a {
   margin-right: 10px;
 }
 
-.status label:checked, .status label:hover, .status label:focus {
+.deletition label:checked, .deletition label:hover, .deletition label:focus, .status label:checked, .status label:hover, .status label:focus {
   border: 1px solid #e34cac;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   opacity: 1;
 }
 
-.status label input:checked + i, .status label input:hover + i, .status label input:focus + i {
+.deletition label input:checked + i, .deletition label input:hover + i, .deletition label input:focus + i, .status label input:checked + i, .status label input:hover + i, .status label input:focus + i {
   opacity: 1;
   -webkit-transition: opacity .4s ease;
   -o-transition: opacity .4s ease;
   -moz-transition: opacity .4s ease;
   transition: opacity .4s ease;
+}
+
+.deletition label {
+  margin-right: 0;
+}
+
+.deletition label input {
+  display: none;
 }
 
 .status label input {
