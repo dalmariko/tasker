@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <!--<link rel="stylesheet" href="css/main.min.css">-->
-    <script src="https://use.fontawesome.com/ca671788c0.js"></script>
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -22,13 +21,16 @@
             <form id="tasks" action="#" method="get"></form>
 
             <div class="taskBar">
-                <input type="checkbox" name="dele" form="tasks">
-                <input type="hidden" name="id" value="id">
+
+                <div class="deletition">
+                    <label><input type="checkbox" name="dele" value="delte" form="tasks"><i class="statusDelete" style="  background-image: url('/img/delete.png');"></i></label>
+                    <input type="hidden" name="id" value="id">
+                </div>
 
                 <div class="status">
-                    <label> <input type="radio" name="status" value="no" form="tasks" checked ><i class="statusNo fa fa-check-square-o " aria-hidden="true"></i></label>
-                    <label> <input type="radio" name="status" value="make" form="tasks" ><i class="statusMake fa fa-angle-double-right " aria-hidden="true"></i></label>
-                    <label> <input type="radio" name="status" value="done" form="tasks"><i class="statusDone fa fa-usd " aria-hidden="true"></i></label>
+                    <label> <input type="radio" name="status" value="no" form="tasks" checked ><i class="statusNo" style="  background-image: url('/img/check.png');"></i></label>
+                    <label> <input type="radio" name="status" value="make" form="tasks" ><i class="statusMake" style="  background-image: url('/img/progress.png');"></i></label>
+                    <label> <input type="radio" name="status" value="done" form="tasks"><i class="statusDone" style="  background-image: url('/img/dolar.png');"></i></label>
                 </div>
 
                 <div class="textTask">

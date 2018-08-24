@@ -1,0 +1,42 @@
+.deletition {
+  @extend %paddings;
+
+  label {
+    @extend %Label;
+
+    &:checked {
+      @extend %border;
+    }
+
+    &:hover {
+      @extend %border;
+    }
+
+    &:focus {
+      @extend %border;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + i {
+      @extend %statusActive;
+    }
+
+    &:hover + i {
+      @extend %statusActive;
+    }
+
+    &:focus + i {
+      @extend %statusActive;
+    }
+
+  }
+
+  i {
+    @extend %i-propertys;
+  }
+
+
+}

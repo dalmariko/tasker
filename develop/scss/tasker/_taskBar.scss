@@ -1,13 +1,92 @@
 .taskBar{
   display: flex;
   flex-direction: row;
-justify-content: space-between;
+  justify-content: space-between;
   flex-wrap: nowrap;
   align-items: flex-start;
 }
 
-@import "status";
+%paddings{
+  padding-right: 5px;
+  padding-left: 5px;
+}
 
-@import "textTask";
+$colorDisable: #e3dae7;
+$colorBoxEnable: #e34cac;
 
-@import "time";
+%statusBackground {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.statusNo {
+  @extend %statusBackground;
+}
+
+.statusMake {
+  @extend %statusBackground;
+}
+
+.statusDone {
+  @extend %statusBackground;
+}
+
+%displayFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+%flexCenter {
+  align-items: center;
+  justify-content: center;
+}
+
+%iLimitLess {
+  width: 20px;
+  height: 20px;
+  opacity: .25;
+}
+
+%mxaLess {
+  width: 30px;
+  height: 30px;
+}
+
+%i-propertys {
+  @extend %displayFlex;
+  @extend %iLimitLess;
+  @extend %flexCenter;
+}
+
+%Label {
+  @extend %displayFlex;
+  @extend %flexCenter;
+  @extend %mxaLess;
+  border: 1px solid $colorDisable;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+%border {
+  @extend %mxaLess;
+  border: 1px solid $colorBoxEnable;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+%statusActive {
+  opacity: 1;
+  transition: opacity .4s ease;
+}
+
+
+@import "tasckBar/deletition";
+
+@import "tasckBar/status";
+
+@import "tasckBar/textTask";
+
+@import "tasckBar/time";

@@ -1,0 +1,105 @@
+
+//@mixin keyframes($animation-name) {
+//  @-webkit-keyframes #{$animation-name} {
+//    @content;
+//  }
+//  @-moz-keyframes #{$animation-name} {
+//    @content;
+//  }
+//  @-ms-keyframes #{$animation-name} {
+//    @content;
+//  }
+//  @-o-keyframes #{$animation-name} {
+//    @content;
+//  }
+//  @keyframes #{$animation-name} {
+//    @content;
+//  }
+//}
+//
+//@mixin animation($str) {
+//  -webkit-animation: #{$str};
+//  -moz-animation: #{$str};
+//  -ms-animation: #{$str};
+//  -o-animation: #{$str};
+//  animation: #{$str};
+//}
+//
+//@include keyframes(BoxBorder) {
+//  0% {
+//    border-bottom: 1px solid #e34cac;
+//    border-radius: 3px;
+//    opacity: 1;
+//  }
+//  25% {
+//    border-left: 1px solid #e34cac;
+//    border-radius: 3px;
+//    opacity: 1;
+//  }
+//  50% {
+//    border-top: 1px solid #e34cac;
+//    border-radius: 3px;
+//    opacity: 1;
+//  }
+//  75% {
+//    border-right: 1px solid #e34cac;
+//    border-radius: 3px;
+//    opacity: 1;
+//  }
+//  100% {
+//    border: 1px solid #e34cac;
+//    border-radius: 3px;
+//    opacity: 1;
+//  }
+//}
+//
+//    @include animation('BoxBorder .9s ease');
+
+.status {
+  @extend %displayFlex;
+  @extend %paddings;
+
+  label {
+    @extend %Label;
+
+    &:checked {
+      @extend %border;
+    }
+
+    &:hover {
+      @extend %border;
+    }
+
+    &:focus {
+      @extend %border;
+    }
+
+    input {
+      display: none;
+
+      &:checked + i {
+        @extend %statusActive;
+      }
+
+      &:hover + i {
+        @extend %statusActive;
+      }
+
+      &:focus + i {
+        @extend %statusActive;
+      }
+
+    }
+
+    i {
+      @extend %i-propertys;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+  }
+
+}
+
