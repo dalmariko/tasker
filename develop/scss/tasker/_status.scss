@@ -8,13 +8,14 @@ $colorStatusDone: #ffa100;
   padding: 6px;
   width: 30px;
   height: 30px;
-  position: relative;
   font-size: 1.3em;
+  border: 1px solid #e3dae7;
+  border-radius: 3px;
   color: #e3dae7;
   opacity: .8;
 }
 
-%LabelBefore {
+%Label {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
@@ -26,10 +27,30 @@ $colorStatusDone: #ffa100;
   opacity: .8;
 }
 
-%border{
+%border {
   border: 1px solid #e34cac;
   border-radius: 3px;
   opacity: 1;
+}
+
+%colorInput {
+  opacity: 1;
+  transition: color .4s, opacity .4s;
+}
+
+%coloreNo {
+  @extend %colorInput;
+  color: $colorStatusNo;
+}
+
+%coloreMake {
+  @extend %colorInput;
+  color: $colorStatusMake;
+}
+
+%coloreDone {
+  @extend %colorInput;
+  color: $colorStatusDone;
 }
 
 @mixin keyframes($animation-name) {
@@ -63,110 +84,78 @@ $colorStatusDone: #ffa100;
     border-bottom: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   25% {
     border-left: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   50% {
     border-top: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   75% {
     border-right: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    transition: border 1s ease-in .9s, opacity 10s ;
   }
   100% {
     border: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
 }
 
-@mixin checkColor($color) {
-  opacity: 1;
-  color: $color;
-  transition: color .4s, opacity .4s;
-}
-
 .status {
+
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   padding-left: 5px;
   padding-right: 5px;
-}
-
-.status {
 
   label {
-   @extend %LabelBefore;
-
-    &:hover {
-      @include animation('BoxBorder .9s ease');
-    }
-
-    //input:focus   {
-    //  @extend %border;
-    //}
-    //
-    //input:active  {
-    //  @extend %border;
-    //}
-
-    input:checked {
-     @extend %border;
-    }
-
-    &:before {
-      @extend %LabelBefore;
-    }
+    @extend %Label;
+    @include animation('BoxBorder .9s ease');
 
     input {
       display: none;
 
       &:checked + .statusNo {
-        @include checkColor($colorStatusNo);
+        @extend %coloreNo;
       }
 
       &:hover + .statusNo {
-        @include checkColor($colorStatusNo);
+        @extend %coloreNo;
       }
 
       &:focus + .statusNo {
-        @include checkColor($colorStatusNo);
+        @extend %coloreNo;
       }
 
       &:checked + .statusMake {
-        @include checkColor($colorStatusMake);
+        @extend %coloreMake;
       }
 
       &:hover + .statusMake {
-        @include checkColor($colorStatusMake);
+        @extend %coloreMake;
       }
 
       &:focus + .statusMake {
-        @include checkColor($colorStatusMake);
+        @extend %coloreMake;
       }
 
       &:checked + .statusDone {
-        @include checkColor($colorStatusDone);
+        @extend %coloreDone;
       }
 
       &:hover + .statusDone {
-        @include checkColor($colorStatusDone);
+        @extend %coloreDone;
       }
 
       &:focus + .statusDone {
-        @include checkColor($colorStatusDone);
+        @extend %coloreDone;
       }
 
     }

@@ -61,13 +61,15 @@ a {
   padding: 6px;
   width: 30px;
   height: 30px;
-  position: relative;
   font-size: 1.3em;
+  border: 1px solid #e3dae7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   color: #e3dae7;
   opacity: .8;
 }
 
-.status label, .status label:before {
+.status label {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
@@ -80,11 +82,24 @@ a {
   opacity: .8;
 }
 
-.status label input:checked {
-  border: 1px solid #e34cac;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+.status label input:checked + .statusNo, .status label input:hover + .statusNo, .status label input:focus + .statusNo, .status label input:checked + .statusMake, .status label input:hover + .statusMake, .status label input:focus + .statusMake, .status label input:checked + .statusDone, .status label input:hover + .statusDone, .status label input:focus + .statusDone {
   opacity: 1;
+  -webkit-transition: color .4s, opacity .4s;
+  -o-transition: color .4s, opacity .4s;
+  -moz-transition: color .4s, opacity .4s;
+  transition: color .4s, opacity .4s;
+}
+
+.status label input:checked + .statusNo, .status label input:hover + .statusNo, .status label input:focus + .statusNo {
+  color: #d40e37;
+}
+
+.status label input:checked + .statusMake, .status label input:hover + .statusMake, .status label input:focus + .statusMake {
+  color: #96d900;
+}
+
+.status label input:checked + .statusDone, .status label input:hover + .statusDone, .status label input:focus + .statusDone {
+  color: #ffa100;
 }
 
 @-webkit-keyframes BoxBorder {
@@ -93,50 +108,30 @@ a {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   25% {
     border-left: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   50% {
     border-top: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   75% {
     border-right: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   100% {
     border: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
 }
 
@@ -145,46 +140,26 @@ a {
     border-bottom: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   25% {
     border-left: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   50% {
     border-top: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   75% {
     border-right: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   100% {
     border: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
 }
 
@@ -193,46 +168,26 @@ a {
     border-bottom: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   25% {
     border-left: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   50% {
     border-top: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   75% {
     border-right: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   100% {
     border: 1px solid #e34cac;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
 }
 
@@ -242,50 +197,30 @@ a {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   25% {
     border-left: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   50% {
     border-top: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   75% {
     border-right: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
   100% {
     border: 1px solid #e34cac;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     opacity: 1;
-    -webkit-transition: border 1s ease-in .9s, opacity 10s;
-    -o-transition: border 1s ease-in .9s, opacity 10s;
-    -moz-transition: border 1s ease-in .9s, opacity 10s;
-    transition: border 1s ease-in .9s, opacity 10s;
   }
 }
 
@@ -302,16 +237,16 @@ a {
   -moz-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.status label:hover {
+.status label {
   -webkit-animation: BoxBorder .9s ease;
   -moz-animation: BoxBorder .9s ease;
   -o-animation: BoxBorder .9s ease;
@@ -320,87 +255,6 @@ a {
 
 .status label input {
   display: none;
-}
-
-.status label input:checked + .statusNo {
-  opacity: 1;
-  color: #d40e37;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:hover + .statusNo {
-  opacity: 1;
-  color: #d40e37;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:focus + .statusNo {
-  opacity: 1;
-  color: #d40e37;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:checked + .statusMake {
-  opacity: 1;
-  color: #96d900;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:hover + .statusMake {
-  opacity: 1;
-  color: #96d900;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:focus + .statusMake {
-  opacity: 1;
-  color: #96d900;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:checked + .statusDone {
-  opacity: 1;
-  color: #ffa100;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:hover + .statusDone {
-  opacity: 1;
-  color: #ffa100;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
-}
-
-.status label input:focus + .statusDone {
-  opacity: 1;
-  color: #ffa100;
-  -webkit-transition: color .4s, opacity .4s;
-  -o-transition: color .4s, opacity .4s;
-  -moz-transition: color .4s, opacity .4s;
-  transition: color .4s, opacity .4s;
 }
 
 .textTask {
