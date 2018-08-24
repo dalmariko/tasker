@@ -1,12 +1,30 @@
-*{
-	box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
 body, p {
-	margin:0;
+  margin: 0;
 }
 
 a {
-	text-decoration:none;	
+  text-decoration: none;
 }
 
+%outline {
+  outline: 0 none !important;
+}
+
+input, button, a {
+  &:hover {
+    @extend %outline;
+  }
+  &:focus {
+    @extend %outline;
+  }
+  &:active {
+    @extend %outline;
+  }
+  &:visited {
+    @extend %outline;
+  }
+}

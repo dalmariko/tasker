@@ -1,8 +1,7 @@
 $colorDisable: #e3dae7;
 $colorBoxEnable: #e34cac;
 
-
-.taskBar{
+.taskBar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +9,7 @@ $colorBoxEnable: #e34cac;
   align-items: flex-start;
 }
 
-%paddings{
+%paddings {
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -87,6 +86,10 @@ $colorBoxEnable: #e34cac;
   transition: opacity .4s ease;
 }
 
+%button {
+  padding: 0;
+  border: 0;
+}
 
 @import "tasckBar/deletition";
 

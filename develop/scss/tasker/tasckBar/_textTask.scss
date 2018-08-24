@@ -1,3 +1,43 @@
 .textTask {
   @extend %paddings;
 }
+
+%bottonHoverFocusActive {
+  opacity: .9;
+  background-color: #a6dcee;
+  transition: opacity .4s, background-color .3s;
+}
+
+.tasckOptions {
+  @extend %button;
+  @extend %displayFlex;
+  @extend %flexCenter;
+
+  button {
+    width: 100px;
+    height: 30px;
+    font-size: .9rem;
+    padding: 2px;
+    border: 1px solid #dab6c8;
+    border-radius: 5px;
+    color: #00040e;
+    opacity: .7;
+    margin-right: 25px;
+
+    &:hover {
+      @extend %bottonHoverFocusActive;
+    }
+
+    &:focus {
+      @extend %bottonHoverFocusActive;
+    }
+
+    &:active {
+      @extend %bottonHoverFocusActive;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
