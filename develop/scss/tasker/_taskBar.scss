@@ -6,7 +6,12 @@ $colorBoxEnable: #e34cac;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: center;
+
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: snow;
+  border: 1px solid ;
 }
 
 %paddings {

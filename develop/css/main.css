@@ -52,11 +52,15 @@ input:hover, button:hover, a:hover, input:focus, button:focus, a:focus, input:ac
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -moz-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: snow;
+  border: 1px solid;
 }
 
 .deletition, .status, .textTask, .time {
@@ -175,8 +179,8 @@ input:hover, button:hover, a:hover, input:focus, button:focus, a:focus, input:ac
 }
 
 .tasckOptions button {
-  width: 100px;
-  height: 30px;
+  width: 85px;
+  height: 25px;
   font-size: .94rem;
   padding: 2px;
   border: 1px solid #dab6c8;
