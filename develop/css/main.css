@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body, p {
+body, p, h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
@@ -14,6 +14,13 @@ a {
 
 input:hover, button:hover, a:hover, input:focus, button:focus, a:focus, input:active, button:active, a:active, input:visited, button:visited, a:visited {
   outline: 0 none !important;
+}
+
+.listReset {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
 .container {
@@ -195,21 +202,66 @@ input:hover, button:hover, a:hover, input:focus, button:focus, a:focus, input:ac
   margin-right: 0;
 }
 
+body {
+  background-color: rgba(45, 45, 45, 0.3);
+}
+
+.modalcontainer {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(51, 192, 238, 0.8);
+  z-index: 10;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  width: 45%;
+  border: 2px solid;
+}
+
 .longTaskText {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-box-orient: horizontal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
   -moz-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
-  width: 65%;
-  border: 1px solid;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.longTaskText h3 {
+  margin-bottom: 15px;
+}
+
+.longTaskText h4 {
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+.longTaskText h5 {
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.longTaskText .tezisList {
+  margin-left: 45px;
+  font-size: .9rem;
+}
+
+.longTaskText .mainTextTasck {
+  padding: 10px;
+  border: 1px solid crimson;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
