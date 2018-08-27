@@ -194,3 +194,22 @@ input:hover, button:hover, a:hover, input:focus, button:focus, a:focus, input:ac
 .tasckOptions button:last-of-type {
   margin-right: 0;
 }
+
+.longTaskText {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  border: 1px solid;
+}
