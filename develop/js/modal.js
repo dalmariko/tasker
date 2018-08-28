@@ -1,16 +1,16 @@
 function ShowmodalWin() {
+    let shedow = document.createElement('div');
+    shedow.id = 'shadow';
+    document.body.appendChild(shedow);
 
     let modal = document.getElementById('myDetails');
-    let btn = document.getElementById('modalDetails');
 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    };
+    modal.style.display = 'block';
 
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+    shedow.onclick = function () {
+        shedow.parentNode.removeChild(shedow);
+        modal.style.display = 'none';
+        return false;
     };
 
 }
