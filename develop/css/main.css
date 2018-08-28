@@ -202,26 +202,16 @@ input:hover, button:hover, a:hover, input:focus, button:focus, a:focus, input:ac
   margin-right: 0;
 }
 
-body {
-  background-color: rgba(45, 45, 45, 0.3);
-}
-
-.modalcontainer {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-color: rgba(51, 192, 238, 0.8);
-  z-index: 10;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  width: 45%;
-  border: 2px solid;
+.Details {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
 .longTaskText {
@@ -230,6 +220,7 @@ body {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 10% auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -238,6 +229,11 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 20px;
+  width: 45%;
+  background-color: #33c0ee;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid;
 }
 
 .longTaskText h3 {

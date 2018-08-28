@@ -1,24 +1,26 @@
-body {
-  background-color: rgba(45, 45, 45, 0.3);
-}
 
-.modalcontainer {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(51, 192, 238, .8);
-  z-index: 10;
-  border-radius: 10px;
-  width: 45%;
-  border: 2px solid;
+.Details {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,.7);
+  z-index: 1;
 }
 
 .longTaskText {
   display: flex;
+  margin:10% auto;
   flex-direction: column;
   padding: 20px;
+  width: 45%;
+  background-color: rgba(51, 192, 238, 1);
+  border-radius: 10px;
+  border: 1px solid;
+
 
   h3 {
     margin-bottom: 15px;

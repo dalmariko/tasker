@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <!--<link rel="stylesheet" href="css/main.min.css">-->
+    <script src="js/modal.js"></script>
     <script src="js/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -23,14 +25,18 @@
             <div class="taskBar">
 
                 <div class="deletition">
-                    <label><input type="checkbox" name="dele" value="delte" form="tasks"><i class="statusDelete" style="  background-image: url('/img/delete.png');"></i></label>
+                    <label><input type="checkbox" name="dele" value="delte" form="tasks"><i class="statusDelete"
+                                                                                            style="  background-image: url('/img/delete.png');"></i></label>
                     <input type="hidden" name="id" value="id">
                 </div>
 
                 <div class="status">
-                    <label> <input type="radio" name="status" value="no" form="tasks" checked ><i class="statusNo" style="  background-image: url('/img/check.png');"></i></label>
-                    <label> <input type="radio" name="status" value="make" form="tasks" ><i class="statusMake" style="  background-image: url('/img/progress.png');"></i></label>
-                    <label> <input type="radio" name="status" value="done" form="tasks"><i class="statusDone" style="  background-image: url('/img/dolar.png');"></i></label>
+                    <label> <input type="radio" name="status" value="no" form="tasks" checked><i class="statusNo"
+                                                                                                 style="  background-image: url('/img/check.png');"></i></label>
+                    <label> <input type="radio" name="status" value="make" form="tasks"><i class="statusMake"
+                                                                                           style="  background-image: url('/img/progress.png');"></i></label>
+                    <label> <input type="radio" name="status" value="done" form="tasks"><i class="statusDone"
+                                                                                           style="  background-image: url('/img/dolar.png');"></i></label>
                 </div>
 
                 <div class="textTask">
@@ -38,7 +44,33 @@
                     <div class="shortTaskText"><p>некий краткий текст задания</p></div>
 
                     <div class="tasckOptions">
-                        <button type="button" class="details">Детали<button>
+                        <button type="button" id="modalDetails" class="details" onclick="ShowmodalWin()">Детали</button>
+
+
+                        <div id="myDetails" class="Details">
+                            <div class="longTaskText">
+
+                                <h3>descriptions</h3>
+                                <h4>shorts descriptions</h4>
+
+                                <h5 class="constTEZIS">Tezis List</h5>
+
+                                <ol class="tezisList ">
+                                    <li class="tezis">som head</li>
+                                    <li class="tezis">next</li>
+                                    <li class="tezis">puny priority</li>
+                                    <li class="tezis">petite</li>
+                                </ol>
+
+                                <div class="mainTextTasck">
+                                    <p>Пойди туда не знаю куда.</p>
+                                    <p>принеси то не знаю что и быстрее.........</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
                         <button type="button" class="change">Изменить</button>
                     </div>
 
